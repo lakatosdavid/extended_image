@@ -14,6 +14,10 @@ mixin DragGestureRecognizerMixin on _DragGestureRecognizer {
       return true;
     }
 
+    if(_velocityTrackers.keys.length >=2){
+      return false;
+    }
+
     // if pointers are not the only, check whether they are in the negative
     // maybe this is a Horizontal/Vertical zoom
     Offset offset = const Offset(1, 1);
